@@ -57,8 +57,16 @@ console.log(sum);
 //Задание 11
 //У вас есть массив numbers, содержащий числа от 1 до 10. Напишите функцию filterEvenNumbers, которая принимает этот массив в качестве аргумента и выводт в консоль новый массив, содержащий только чётные числа из исходного массива, с использованием метода filter().
 
-
+const filterEvenNumbers = numbers.filter(num => {
+    return num % 2 == 0;
+});
+console.log(filterEvenNumbers);
 
 //Задание 12
 //Напишите функцию sortAndPrint, которая принимает копию массива randomNumbers с помощью оператора spread и сортирует его в порядке возрастания с использованием метода sort(). Затем выведите отсортированный массив чисел в консоль.
 let randomNumbers = [72, 45, 19, 84, 37, 56, 91, 23, 68, 10, 98, 32];
+let randomNumbersCopy = [...randomNumbers];
+randomNumbersCopy.sort((a, b) => {
+    return a - b;
+});
+console.log(randomNumbersCopy);
